@@ -73,6 +73,14 @@ app.use(cookieParser());
 // Static file uploads fallback
 app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));
 
+// Fallback: Support requests without /api prefix
+app.use((req, res, next) => {
+  if (!req.url.startsWith('/api') && !req.url.startsWith('/uploads')) {
+    req.url = `/api${req.url}`;
+  }
+  next();
+});
+
 // Health check
 app.get('/api/health', (req, res) => {
   res.status(200).json({
