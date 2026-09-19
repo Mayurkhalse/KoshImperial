@@ -1,0 +1,36 @@
+{
+  "name": "kosh-imperial-monorepo",
+  "version": "1.0.0",
+  "description": "Kosh Imperial - E-commerce & Promotional Website Monorepo",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client",
+    "admin"
+  ],
+  "scripts": {
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev:admin": "npm --prefix admin run dev",
+    "dev": "concurrently -n \"SERVER,CLIENT,ADMIN\" -c \"bgBlue.bold,bgGreen.bold,bgMagenta.bold\" \"npm run dev:server\" \"npm run dev:client\" \"npm run dev:admin\"",
+    "seed": "npm --prefix server run seed",
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install && npm --prefix admin install",
+    "build:client": "npm --prefix client run build",
+    "build:admin": "npm --prefix admin run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "kosh-imperial",
+    "sustainable",
+    "ecommerce",
+    "plantable-wallets",
+    "react",
+    "vite",
+    "express",
+    "mongodb"
+  ],
+  "author": "Kosh Imperial Engineering",
+  "license": "ISC"
+}

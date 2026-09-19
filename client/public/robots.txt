@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /checkout
+Disallow: /account/
+Sitemap: https://koshimperial.com/sitemap.xml
