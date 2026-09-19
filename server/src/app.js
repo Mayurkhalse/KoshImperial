@@ -31,10 +31,38 @@ const app = express();
 configurePassport();
 app.use(passport.initialize());
 
-// Middlewares
+// Sanitized CORS origins list
+const clientUrls = (env.CLIENT_URL || '')
+  .split(',')
+  .map((u) => u.trim().replace(/\/$/, ''))
+  .filter(Boolean);
+
+const adminUrls = (env.ADMIN_URL || '')
+  .split(',')
+  .map((u) => u.trim().replace(/\/$/, ''))
+  .filter(Boolean);
+
+const allowedOrigins = new Set([
+  ...clientUrls,
+  ...adminUrls,
+  'http://localhost:5173',
+  'http://localhost:5174',
+]);
+
 app.use(
   cors({
-    origin: [env.CLIENT_URL, env.ADMIN_URL, 'http://localhost:5173', 'http://localhost:5174'],
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+      const normalizedOrigin = origin.replace(/\/$/, '');
+      if (
+        allowedOrigins.has(normalizedOrigin) ||
+        normalizedOrigin.endsWith('.vercel.app') ||
+        (env.NODE_ENV !== 'production' && (normalizedOrigin.startsWith('http://localhost:') || normalizedOrigin.startsWith('http://127.0.0.1:')))
+      ) {
+        return callback(null, true);
+      }
+      return callback(new Error(`CORS blocked for origin: ${origin}`));
+    },
     credentials: true,
   })
 );

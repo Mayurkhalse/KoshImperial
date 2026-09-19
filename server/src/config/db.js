@@ -1,5 +1,13 @@
 import mongoose from 'mongoose';
 import { env } from './env.js';
+import dns from 'node:dns';
+
+// Fix for Windows & local ISP DNS dropping SRV queries (querySrv ECONNREFUSED)
+try {
+  dns.setServers(['8.8.8.8', '8.8.4.4']);
+} catch {
+  // Ignore in environments that disallow overriding DNS
+}
 
 export const connectDB = async () => {
   try {

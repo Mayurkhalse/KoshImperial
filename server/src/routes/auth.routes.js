@@ -6,6 +6,7 @@ import {
   refresh,
   logout,
   getMe,
+  REFRESH_COOKIE_OPTIONS,
 } from '../controllers/auth.controller.js';
 import { verifyJWT } from '../middleware/auth.middleware.js';
 import { asyncHandler } from '../utils/asyncHandler.js';
@@ -34,12 +35,7 @@ router.get(
   }),
   (req, res) => {
     const { accessToken, refreshToken } = generateTokens(req.user);
-    res.cookie('refreshToken', refreshToken, {
-      httpOnly: true,
-      secure: env.NODE_ENV === 'production',
-      sameSite: 'lax',
-      maxAge: 7 * 24 * 60 * 60 * 1000,
-    });
+    res.cookie('refreshToken', refreshToken, REFRESH_COOKIE_OPTIONS);
     res.redirect(`${env.CLIENT_URL}/login?token=${accessToken}`);
   }
 );

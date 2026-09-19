@@ -4,6 +4,15 @@ import { ApiResponse } from '../utils/apiResponse.js';
 import jwt from 'jsonwebtoken';
 import { env } from '../config/env.js';
 
+const isProduction = env.NODE_ENV === 'production';
+
+export const REFRESH_COOKIE_OPTIONS = {
+  httpOnly: true,
+  secure: isProduction,
+  sameSite: isProduction ? 'none' : 'lax',
+  maxAge: 7 * 24 * 60 * 60 * 1000,
+};
+
 export const register = async (req, res) => {
   const { name, email, password, phone } = req.body;
 
@@ -24,12 +33,7 @@ export const register = async (req, res) => {
   user.refreshToken = refreshToken;
   await user.save();
 
-  res.cookie('refreshToken', refreshToken, {
-    httpOnly: true,
-    secure: env.NODE_ENV === 'production',
-    sameSite: 'lax',
-    maxAge: 7 * 24 * 60 * 60 * 1000,
-  });
+  res.cookie('refreshToken', refreshToken, REFRESH_COOKIE_OPTIONS);
 
   return ApiResponse.success(
     res,
@@ -65,12 +69,7 @@ export const login = async (req, res) => {
   user.refreshToken = refreshToken;
   await user.save();
 
-  res.cookie('refreshToken', refreshToken, {
-    httpOnly: true,
-    secure: env.NODE_ENV === 'production',
-    sameSite: 'lax',
-    maxAge: 7 * 24 * 60 * 60 * 1000,
-  });
+  res.cookie('refreshToken', refreshToken, REFRESH_COOKIE_OPTIONS);
 
   return ApiResponse.success(
     res,
@@ -107,12 +106,7 @@ export const refresh = async (req, res) => {
     user.refreshToken = tokens.refreshToken;
     await user.save();
 
-    res.cookie('refreshToken', tokens.refreshToken, {
-      httpOnly: true,
-      secure: env.NODE_ENV === 'production',
-      sameSite: 'lax',
-      maxAge: 7 * 24 * 60 * 60 * 1000,
-    });
+    res.cookie('refreshToken', tokens.refreshToken, REFRESH_COOKIE_OPTIONS);
 
     return ApiResponse.success(res, { accessToken: tokens.accessToken }, 'Token refreshed');
   } catch (err) {
@@ -124,7 +118,11 @@ export const logout = async (req, res) => {
   if (req.user) {
     await User.findByIdAndUpdate(req.user._id, { $unset: { refreshToken: 1 } });
   }
-  res.clearCookie('refreshToken');
+  res.clearCookie('refreshToken', {
+    httpOnly: true,
+    secure: isProduction,
+    sameSite: isProduction ? 'none' : 'lax',
+  });
   return ApiResponse.success(res, null, 'Logged out successfully');
 };
 
