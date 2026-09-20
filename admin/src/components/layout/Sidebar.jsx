@@ -26,13 +26,22 @@ export const Sidebar = () => {
     <aside className="w-64 bg-evergreen-900 text-milkglass-base flex flex-col justify-between shrink-0 min-h-screen border-r border-evergreen-700">
       <div>
         {/* Brand Header */}
-        <div className="p-6 border-b border-evergreen-700">
-          <span className="font-serif text-xl tracking-wider text-milkglass-base font-normal block">
-            KOSH IMPERIAL
-          </span>
-          <span className="text-[10px] uppercase tracking-[0.2em] text-evergreen-200 block mt-0.5">
-            Atelier Administration
-          </span>
+        <div className="p-6 border-b border-evergreen-700 flex items-center gap-3">
+          <div className="h-10 w-10 flex-shrink-0 flex items-center justify-center overflow-hidden rounded-full border border-evergreen-600/60 bg-[#EDE8D8] shadow-sm">
+            <img
+              src="/vulture.logo.of.kosh.png"
+              alt="Kosh Imperial Vulture Emblem"
+              className="h-full w-full object-contain p-0.5 mix-blend-multiply"
+            />
+          </div>
+          <div>
+            <span className="font-serif text-lg tracking-wider text-milkglass-base font-normal block leading-tight">
+              KOSH IMPERIAL
+            </span>
+            <span className="text-[9px] uppercase tracking-[0.2em] text-evergreen-200 block mt-0.5">
+              Atelier Admin
+            </span>
+          </div>
         </div>
 
         {/* Navigation */}

@@ -66,6 +66,37 @@ export const StoryHero = () => {
             </p>
           </div>
         </div>
+
+        {/* Row 3: Text Left, Emblem Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-8 border-t border-driftwood-300">
+          <div className="lg:col-span-6 space-y-6">
+            <SectionHeading
+              eyebrow="THE IMPERIAL INSIGNIA"
+              title="Guardian of the"
+              accent="Sacred Kosh."
+              className="!mb-6"
+            />
+            <p className="text-base sm:text-lg text-charcoal/85 leading-relaxed font-sans">
+              In ancient Sanskrit lore, <em>Kosh</em> (कोष) signifies the treasury—the sacred repository
+              of invaluable creations, heirloom treasures, and timeless wealth.
+            </p>
+            <p className="text-sm sm:text-base text-charcoal/80 leading-relaxed font-sans">
+              Our emblem features the gilded sentinel perched resolutely above the royal coffer. As nature's
+              quintessential steward of renewal, it embodies vigilance, soaring elevation, and cyclical rebirth—a
+              fitting guardian for wallets designed to cherish what matters in this life and return cleanly to the earth.
+            </p>
+          </div>
+
+          <div className="lg:col-span-6 flex justify-center">
+            <div className="relative p-8 sm:p-12 rounded-2xl bg-[#EDE8D8] border border-driftwood-400 shadow-luxury max-w-md w-full flex items-center justify-center">
+              <img
+                src="/vulture.logo.of.kosh.png"
+                alt="Kosh Imperial Royal Vulture Emblem"
+                className="w-full max-h-96 object-contain mix-blend-multiply drop-shadow-md hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

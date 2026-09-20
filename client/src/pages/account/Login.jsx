@@ -34,6 +34,15 @@ export const Login = () => {
       </div>
       <div className="max-w-md w-full mx-4 bg-milkglass-100 border border-driftwood-300 p-8 md:p-10 shadow-luxury space-y-8">
         <div className="text-center space-y-2">
+          <div className="flex justify-center mb-1">
+            <div className="h-16 w-16 flex items-center justify-center overflow-hidden rounded-full border border-driftwood-400/60 bg-driftwood-200/50 shadow-sm">
+              <img
+                src="/vulture.logo.of.kosh.png"
+                alt="Kosh Imperial Vulture Emblem"
+                className="h-full w-full object-contain p-1 mix-blend-multiply"
+              />
+            </div>
+          </div>
           <p className="text-xs uppercase tracking-[0.2em] font-sans font-semibold text-mahogany-base">
             WELCOME BACK
           </p>

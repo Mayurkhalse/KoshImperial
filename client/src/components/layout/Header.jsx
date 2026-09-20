@@ -28,13 +28,22 @@ export const Header = () => {
 
           {/* Brand Logo */}
           <div className="flex items-center">
-            <Link to="/" className="group flex flex-col">
-              <span className="font-serif text-xl sm:text-2xl md:text-3xl tracking-wider text-evergreen-700 font-normal group-hover:text-mahogany-base transition-colors">
-                KOSH IMPERIAL
-              </span>
-              <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-muted-brown -mt-0.5 sm:-mt-1 font-sans font-medium">
-                Luxury Eco-Craft
-              </span>
+            <Link to="/" className="group flex items-center gap-2.5 sm:gap-3.5">
+              <div className="relative h-10 sm:h-12 w-10 sm:w-12 flex-shrink-0 flex items-center justify-center overflow-hidden rounded-full border border-driftwood-400/60 bg-driftwood-200/50 shadow-xs group-hover:border-mahogany-base/50 transition-colors">
+                <img
+                  src="/vulture.logo.of.kosh.png"
+                  alt="Kosh Imperial Vulture Emblem"
+                  className="h-full w-full object-contain p-0.5 mix-blend-multiply transform group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-serif text-xl sm:text-2xl md:text-3xl tracking-wider text-evergreen-700 font-normal group-hover:text-mahogany-base transition-colors">
+                  KOSH IMPERIAL
+                </span>
+                <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-muted-brown -mt-0.5 sm:-mt-1 font-sans font-medium">
+                  Luxury Eco-Craft
+                </span>
+              </div>
             </Link>
           </div>
 

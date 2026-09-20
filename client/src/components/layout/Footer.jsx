@@ -21,8 +21,22 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-evergreen-500/40">
           {/* Brand Column (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="inline-block font-serif text-3xl tracking-wider text-milkglass-base font-normal hover:text-evergreen-200 transition-colors">
-              KOSH IMPERIAL
+            <Link to="/" className="inline-flex items-center gap-3.5 group">
+              <div className="h-12 w-12 flex-shrink-0 flex items-center justify-center overflow-hidden rounded-full border border-evergreen-600/60 bg-[#EDE8D8] shadow-md group-hover:border-evergreen-400 transition-colors">
+                <img
+                  src="/vulture.logo.of.kosh.png"
+                  alt="Kosh Imperial Royal Vulture Emblem"
+                  className="h-full w-full object-contain p-0.5 mix-blend-multiply"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-serif text-2xl sm:text-3xl tracking-wider text-milkglass-base font-normal group-hover:text-evergreen-200 transition-colors">
+                  KOSH IMPERIAL
+                </span>
+                <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.25em] text-driftwood-300 font-sans font-medium">
+                  Luxury Eco-Craft
+                </span>
+              </div>
             </Link>
             <p className="text-driftwood-base text-sm leading-relaxed max-w-sm pt-2">
               Quiet luxury with a conscience. Handcrafting biodegradable plant-fiber wallets embedded

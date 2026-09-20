@@ -15,9 +15,18 @@ export const MobileMenu = ({ isOpen, onClose }) => {
       <div className="relative w-4/5 max-w-xs bg-milkglass-base h-full shadow-2xl p-6 flex flex-col justify-between z-10">
         <div>
           <div className="flex items-center justify-between pb-6 border-b border-driftwood-300">
-            <span className="font-serif text-xl tracking-wider text-evergreen-700 font-medium">
-              KOSH IMPERIAL
-            </span>
+            <Link to="/" onClick={onClose} className="flex items-center gap-2.5">
+              <div className="h-9 w-9 flex-shrink-0 flex items-center justify-center overflow-hidden rounded-full border border-driftwood-400/60 bg-driftwood-200/50">
+                <img
+                  src="/vulture.logo.of.kosh.png"
+                  alt="Kosh Imperial Vulture Emblem"
+                  className="h-full w-full object-contain p-0.5 mix-blend-multiply"
+                />
+              </div>
+              <span className="font-serif text-lg tracking-wider text-evergreen-700 font-medium">
+                KOSH IMPERIAL
+              </span>
+            </Link>
             <button type="button" onClick={onClose} className="p-1 text-evergreen-700">
               <X className="w-5 h-5" />
             </button>

@@ -9,6 +9,15 @@ export const BrandStatement = () => {
       </div>
 
       <div className="max-w-4xl mx-auto px-4 md:px-8 text-center space-y-6 relative z-10">
+        {/* Emblem Crest */}
+        <div className="flex justify-center -mb-2">
+          <img
+            src="/vulture.logo.of.kosh.png"
+            alt="Kosh Imperial Royal Crest"
+            className="h-24 sm:h-32 md:h-36 w-auto object-contain mix-blend-multiply drop-shadow-sm hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+
         <div className="flex items-center justify-center gap-3">
           <span className="h-px w-10 bg-driftwood-600/60" />
           <p className="text-[11px] uppercase tracking-[0.25em] font-sans font-semibold text-mahogany-base">

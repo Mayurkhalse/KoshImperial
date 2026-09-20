@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import api from '../services/api.js';
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ export const Login = () => {
     setError('');
 
     try {
-      const res = await axios.post('/api/auth/login', { email, password }, { withCredentials: true });
+      const res = await api.post('/auth/login', { email, password });
       const user = res.data?.data?.user;
       const token = res.data?.data?.accessToken;
 
@@ -38,7 +38,16 @@ export const Login = () => {
   return (
     <div className="min-h-screen bg-evergreen-900 flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-milkglass-100 border border-evergreen-700 p-8 md:p-10 shadow-2xl space-y-6">
-        <div className="text-center space-y-1">
+        <div className="text-center space-y-2">
+          <div className="flex justify-center mb-1">
+            <div className="h-16 w-16 flex items-center justify-center overflow-hidden rounded-full border border-driftwood-400/60 bg-[#EDE8D8] shadow-md">
+              <img
+                src="/vulture.logo.of.kosh.png"
+                alt="Kosh Imperial Vulture Emblem"
+                className="h-full w-full object-contain p-1 mix-blend-multiply"
+              />
+            </div>
+          </div>
           <span className="font-serif text-3xl tracking-wider text-evergreen-700 font-normal block">
             KOSH IMPERIAL
           </span>
