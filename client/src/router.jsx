@@ -1,11 +1,12 @@
 import React from 'react';
-import { createBrowserRouter, Outlet } from 'react-router-dom';
+import { createBrowserRouter, Outlet, ScrollRestoration } from 'react-router-dom';
 
 import { AnnouncementBar } from './components/layout/AnnouncementBar.jsx';
 import { Header } from './components/layout/Header.jsx';
 import { Footer } from './components/layout/Footer.jsx';
 import { CartDrawer } from './components/cart/CartDrawer.jsx';
 import { ToastContainer } from './components/common/Toast.jsx';
+import { ScrollToTop } from './components/common/ScrollToTop.jsx';
 
 import { Home } from './pages/Home.jsx';
 import { Shop } from './pages/Shop.jsx';
@@ -30,6 +31,8 @@ import { Addresses } from './pages/account/Addresses.jsx';
 const RootLayout = () => {
   return (
     <div className="flex flex-col min-h-screen">
+      <ScrollRestoration />
+      <ScrollToTop />
       <AnnouncementBar />
       <Header />
       <main className="flex-grow">

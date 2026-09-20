@@ -11,6 +11,10 @@ export const ProductDetail = () => {
   const { slug } = useParams();
   const { data: productData, isLoading, error } = useProductDetail(slug);
 
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [slug]);
+
   if (isLoading) {
     return (
       <div className="py-32 flex justify-center">
