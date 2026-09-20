@@ -29,11 +29,11 @@ export const Header = () => {
           {/* Brand Logo */}
           <div className="flex items-center">
             <Link to="/" className="group flex items-center gap-2.5 sm:gap-3.5">
-              <div className="relative h-10 sm:h-12 w-10 sm:w-12 flex-shrink-0 flex items-center justify-center overflow-hidden rounded-full border border-driftwood-400/60 bg-driftwood-200/50 shadow-xs group-hover:border-mahogany-base/50 transition-colors">
+              <div className="relative h-11 sm:h-13 w-11 sm:w-13 flex-shrink-0 flex items-center justify-center overflow-hidden rounded-full border border-driftwood-400/80 bg-[#EDE8D8] shadow-xs group-hover:border-mahogany-base transition-colors">
                 <img
-                  src="/vulture.logo.of.kosh.png"
-                  alt="Kosh Imperial Vulture Emblem"
-                  className="h-full w-full object-contain p-0.5 mix-blend-multiply transform group-hover:scale-110 transition-transform duration-300"
+                  src="/vulture-logo-circle.png"
+                  alt="Kosh Imperial Royal Vulture Emblem"
+                  className="h-full w-full object-cover transform group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <div className="flex flex-col">
@@ -41,7 +41,7 @@ export const Header = () => {
                   KOSH IMPERIAL
                 </span>
                 <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-muted-brown -mt-0.5 sm:-mt-1 font-sans font-medium">
-                  Luxury Eco-Craft
+                  The Art of Conscious Living
                 </span>
               </div>
             </Link>

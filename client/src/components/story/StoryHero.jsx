@@ -88,11 +88,11 @@ export const StoryHero = () => {
           </div>
 
           <div className="lg:col-span-6 flex justify-center">
-            <div className="relative p-8 sm:p-12 rounded-2xl bg-[#EDE8D8] border border-driftwood-400 shadow-luxury max-w-md w-full flex items-center justify-center">
+            <div className="relative p-3 sm:p-4 rounded-full bg-[#EDE8D8] border-2 border-driftwood-400/80 shadow-luxury aspect-square max-w-xs sm:max-w-sm w-full flex items-center justify-center overflow-hidden">
               <img
-                src="/vulture.logo.of.kosh.png"
+                src="/vulture-logo-circle.png"
                 alt="Kosh Imperial Royal Vulture Emblem"
-                className="w-full max-h-96 object-contain mix-blend-multiply drop-shadow-md hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover rounded-full drop-shadow-md hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>

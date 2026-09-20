@@ -97,7 +97,7 @@ Since 4 colors alone aren't enough for hover states, disabled states, and dark-s
 
 | Style | Font | Size (desktop) | Size (mobile) | Weight | Usage |
 |---|---|---|---|---|---|
-| Eyebrow label | Inter | 13px, uppercase, tracked +0.1em | 12px | 600 | "KOSH IMPERIAL — LUXURY ECO-CRAFT" |
+| Eyebrow label | Inter | 13px, uppercase, tracked +0.1em | 12px | 600 | "KOSH IMPERIAL — THE ART OF CONSCIOUS LIVING" |
 | H1 | Fraunces | 64px | 36px | 400, italic for accent word | Hero headline |
 | H2 | Fraunces | 44px | 28px | 400 | Section titles |
 | H3 | Fraunces | 28px | 22px | 400 | Card/subsection titles |

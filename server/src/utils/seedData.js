@@ -254,7 +254,7 @@ export const seedDatabase = async () => {
       {
         pageKey: 'home-hero',
         blocks: [
-          { key: 'eyebrow', value: 'KOSH IMPERIAL — LUXURY ECO-CRAFT' },
+          { key: 'eyebrow', value: 'KOSH IMPERIAL — THE ART OF CONSCIOUS LIVING' },
           { key: 'heading', value: 'Wallets crafted with quiet luxury' },
           { key: 'accentWord', value: 'that can return.' },
           {

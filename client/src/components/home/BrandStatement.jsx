@@ -10,12 +10,14 @@ export const BrandStatement = () => {
 
       <div className="max-w-4xl mx-auto px-4 md:px-8 text-center space-y-6 relative z-10">
         {/* Emblem Crest */}
-        <div className="flex justify-center -mb-2">
-          <img
-            src="/vulture.logo.of.kosh.png"
-            alt="Kosh Imperial Royal Crest"
-            className="h-24 sm:h-32 md:h-36 w-auto object-contain mix-blend-multiply drop-shadow-sm hover:scale-105 transition-transform duration-500"
-          />
+        <div className="flex justify-center -mb-1">
+          <div className="h-28 w-28 sm:h-36 sm:w-36 rounded-full overflow-hidden border-2 border-driftwood-400/80 shadow-luxury bg-[#EDE8D8] p-1 flex items-center justify-center transform hover:scale-105 transition-transform duration-500">
+            <img
+              src="/vulture-logo-circle.png"
+              alt="Kosh Imperial Royal Crest"
+              className="h-full w-full object-cover rounded-full"
+            />
+          </div>
         </div>
 
         <div className="flex items-center justify-center gap-3">

@@ -27,11 +27,11 @@ export const Sidebar = () => {
       <div>
         {/* Brand Header */}
         <div className="p-6 border-b border-evergreen-700 flex items-center gap-3">
-          <div className="h-10 w-10 flex-shrink-0 flex items-center justify-center overflow-hidden rounded-full border border-evergreen-600/60 bg-[#EDE8D8] shadow-sm">
+          <div className="h-10 w-10 flex-shrink-0 flex items-center justify-center overflow-hidden rounded-full border border-evergreen-600/80 bg-[#EDE8D8] shadow-sm">
             <img
-              src="/vulture.logo.of.kosh.png"
+              src="/vulture-logo-circle.png"
               alt="Kosh Imperial Vulture Emblem"
-              className="h-full w-full object-contain p-0.5 mix-blend-multiply"
+              className="h-full w-full object-cover"
             />
           </div>
           <div>

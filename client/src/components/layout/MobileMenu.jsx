@@ -16,11 +16,11 @@ export const MobileMenu = ({ isOpen, onClose }) => {
         <div>
           <div className="flex items-center justify-between pb-6 border-b border-driftwood-300">
             <Link to="/" onClick={onClose} className="flex items-center gap-2.5">
-              <div className="h-9 w-9 flex-shrink-0 flex items-center justify-center overflow-hidden rounded-full border border-driftwood-400/60 bg-driftwood-200/50">
+              <div className="h-10 w-10 flex-shrink-0 flex items-center justify-center overflow-hidden rounded-full border border-driftwood-400/80 bg-[#EDE8D8] shadow-xs">
                 <img
-                  src="/vulture.logo.of.kosh.png"
+                  src="/vulture-logo-circle.png"
                   alt="Kosh Imperial Vulture Emblem"
-                  className="h-full w-full object-contain p-0.5 mix-blend-multiply"
+                  className="h-full w-full object-cover"
                 />
               </div>
               <span className="font-serif text-lg tracking-wider text-evergreen-700 font-medium">

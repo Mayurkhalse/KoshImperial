@@ -1,5 +1,5 @@
 export const BRAND_NAME = 'Kosh Imperial';
-export const BRAND_TAGLINE = 'Luxury Eco-Craft — Heirloom Wallets That Return To Earth';
+export const BRAND_TAGLINE = 'The Art of Conscious Living — Heirloom Wallets That Return To Earth';
 
 export const SHIPPING_THRESHOLD_FREE = 2000;
 export const STANDARD_SHIPPING_FEE = 150;

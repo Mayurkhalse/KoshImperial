@@ -25,11 +25,11 @@ export const Register = () => {
       <div className="max-w-md w-full mx-4 bg-milkglass-100 border border-driftwood-300 p-8 md:p-10 shadow-luxury space-y-8">
         <div className="text-center space-y-2">
           <div className="flex justify-center mb-1">
-            <div className="h-16 w-16 flex items-center justify-center overflow-hidden rounded-full border border-driftwood-400/60 bg-driftwood-200/50 shadow-sm">
+            <div className="h-16 w-16 flex items-center justify-center overflow-hidden rounded-full border border-driftwood-400/80 bg-[#EDE8D8] shadow-sm">
               <img
-                src="/vulture.logo.of.kosh.png"
+                src="/vulture-logo-circle.png"
                 alt="Kosh Imperial Vulture Emblem"
-                className="h-full w-full object-contain p-1 mix-blend-multiply"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>
