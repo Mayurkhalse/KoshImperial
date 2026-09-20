@@ -29,7 +29,10 @@ export const Header = () => {
           {/* Brand Logo */}
           <div className="flex items-center">
             <Link to="/" className="group flex items-center gap-2.5 sm:gap-3.5">
-              <div className="relative h-11 sm:h-13 w-11 sm:w-13 flex-shrink-0 flex items-center justify-center overflow-hidden rounded-full border border-driftwood-400/80 bg-[#EDE8D8] shadow-xs group-hover:border-mahogany-base transition-colors">
+              <div
+                style={{ width: '44px', height: '44px', minWidth: '44px', minHeight: '44px' }}
+                className="relative w-11 h-11 shrink-0 flex items-center justify-center overflow-hidden rounded-full border border-driftwood-400/80 bg-[#EDE8D8] shadow-xs group-hover:border-mahogany-base transition-colors"
+              >
                 <img
                   src="/vulture-logo-circle.png"
                   alt="Kosh Imperial Royal Vulture Emblem"

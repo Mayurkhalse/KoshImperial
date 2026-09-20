@@ -22,11 +22,14 @@ export const Footer = () => {
           {/* Brand Column (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
             <Link to="/" className="inline-flex items-center gap-3.5 group">
-              <div className="h-13 w-13 flex-shrink-0 flex items-center justify-center overflow-hidden rounded-full border border-evergreen-500/80 bg-[#EDE8D8] shadow-md group-hover:border-evergreen-300 transition-colors">
+              <div
+                style={{ width: '44px', height: '44px', minWidth: '44px', minHeight: '44px' }}
+                className="w-11 h-11 shrink-0 flex items-center justify-center overflow-hidden rounded-full border border-evergreen-600/80 bg-[#EDE8D8] shadow-sm group-hover:border-evergreen-400 transition-colors"
+              >
                 <img
                   src="/vulture-logo-circle.png"
                   alt="Kosh Imperial Royal Vulture Emblem"
-                  className="h-full w-full object-cover"
+                  className="w-full h-full object-cover block rounded-full"
                 />
               </div>
               <div className="flex flex-col">

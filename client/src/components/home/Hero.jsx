@@ -4,7 +4,8 @@ import { Button } from '../common/Button.jsx';
 import { Sprout, ShieldCheck, Sparkles, ArrowRight } from 'lucide-react';
 
 export const Hero = ({ content = {} }) => {
-  const eyebrow = content.eyebrow || 'KOSH IMPERIAL — QUIET LUXURY WITH A CONSCIENCE';
+  const rawEyebrow = content.eyebrow || 'KOSH IMPERIAL — THE ART OF CONSCIOUS LIVING';
+  const eyebrow = rawEyebrow.replace(/LUXURY ECO-CRAFT/gi, 'THE ART OF CONSCIOUS LIVING');
   const heading = content.heading || 'Wallets crafted with quiet luxury';
   const accentWord = content.accentWord || 'that can return.';
   const subtext =

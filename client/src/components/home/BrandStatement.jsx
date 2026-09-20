@@ -11,7 +11,10 @@ export const BrandStatement = () => {
       <div className="max-w-4xl mx-auto px-4 md:px-8 text-center space-y-6 relative z-10">
         {/* Emblem Crest */}
         <div className="flex justify-center -mb-1">
-          <div className="h-28 w-28 sm:h-36 sm:w-36 rounded-full overflow-hidden border-2 border-driftwood-400/80 shadow-luxury bg-[#EDE8D8] p-1 flex items-center justify-center transform hover:scale-105 transition-transform duration-500">
+          <div
+            style={{ width: '60px', height: '60px', minWidth: '60px', minHeight: '60px' }}
+            className="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden border border-driftwood-400/80 shadow-md bg-[#EDE8D8] p-0.5 flex items-center justify-center transform hover:scale-105 transition-transform duration-300"
+          >
             <img
               src="/vulture-logo-circle.png"
               alt="Kosh Imperial Royal Crest"
